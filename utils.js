@@ -13,7 +13,6 @@ export const print = (text) => {
 }
 
 export const exercise = (text, callback) => {
-  console.log("Button created")
   const button = document.createElement("button")
   button.textContent = text
   button.addEventListener("click", callback)
