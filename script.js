@@ -1,12 +1,8 @@
-import { read, print, createButton } from "./utils.js"
+import { read, print, exercise } from "./utils.js"
 
-
-createButton("Example", () => {
-  let num = 11
-
-  if (num < 10) {
-    num = num + 5
+exercise("Aufgabe 1", () => {
+  let input = read()
+  if (input.length > 0) {
+    print(input)
   }
-
-  print(num)
 })

@@ -6,9 +6,13 @@ export const read = () => {
 export const print = (text) => {
   const output = document.querySelector("#output")
   output.textContent += "\n > " + text
+  output.parentElement.scrollTo({
+    top: output.scrollHeight,
+    behavior: "smooth"
+  })
 }
 
-export const createButton = (text, callback) => {
+export const exercise = (text, callback) => {
   console.log("Button created")
   const button = document.createElement("button")
   button.textContent = text
