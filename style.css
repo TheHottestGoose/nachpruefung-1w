@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div:has(#output) {
+    position: absolute;
+    background-color: lightgrey;
+    height: 50vh;
+    width: 100vw;
+    top: 50vh;
+    overflow: scroll;
+    font-size: 2.5em;
+}
+
+.button-container {
+    padding: 20px;
+}
+
+#input {
+    margin: 10px 5%;
+    width: 90%;
+    font-size: 24pt;
+}
+
+button {
+    min-width: 180px;
+    min-height: 50px;
+    margin: 20px;
+}
