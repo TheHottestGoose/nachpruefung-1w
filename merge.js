@@ -5,10 +5,12 @@ function numAt(numbers, i) {
   return numbers[i]
 }
 
-function fillNumbers(numbers, {start, stop, step}) {
+function createNumbers(start, stop, step) {
+  let res = []
   for (let i = start; i < stop; i+=step) {
-    numbers.push(i)
+    res.push(i)
   }
+  return res
 }
 
 function parseInput() {
@@ -31,15 +33,17 @@ function parseInput() {
 
 function calcSum(numbers) {
   let sum = 0
-  numbers.map(num => sum += num)
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numAt(numbers, i)
+  }
   return sum
 }
 
 
 exercise("Merge", function() {
   let input = read()
-  let numbers = []
-  fillNumbers(numbers, parseInput(input))
+  let {start, stop , step} = parseInput(input)
+  let numbers = createNumbers(start, stop, step)
   let sum = calcSum(numbers)
 
   print("Summe: " + sum)
