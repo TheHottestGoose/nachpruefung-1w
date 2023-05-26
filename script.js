@@ -19,23 +19,23 @@ exercise("Beispiel", function() {
 
 exercise("Aufgabe 2", function() {
   // Aufgabe 2 (b)
-  // 
+  // Der input wird gelesen und dann geteilt in verschiedene code strings.
   let input = read().split("")
 
   // Aufgabe 2 (c)
-  // 
+  // Resulat output des oberen codes.
   let res = []
 
   // Aufgabe 2 (d)
-  // 
+  // zu i also zu null wird etwas addiert.
   for (let i = 0; i < input.length; i++) {
 
     // Aufgabe 2 (e)
-    // 
+    // der input wird in Grossbuchstaben geschrieben
     res.push(input[i].toUpperCase())
   }
 
   // Aufgabe 2 (f)
-  // 
+  // nimmt die geteilten strings wieder zusammen und printed den output.
   print(res.join(""))
 })
