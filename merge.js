@@ -1,7 +1,8 @@
 import {read, print, exercise} from "./utils.js"
 
-function numAt(array, index) {
-  return array[index]
+// Gib die Zahl an der Stelle i zurück
+function numAt(numbers, i) {
+  return numbers[i]
 }
 
 function createNumbers(start, stop, step) {
@@ -12,12 +13,12 @@ function createNumbers(start, stop, step) {
   return res
 }
 
-function parseInput(input) {
-  let arr = input.split(" ")
+function parseInput() {
+  let arr = read().split(" ")
   let start = 0
   let stop = 1
   let step = 1
-  if (arr.length > 0 && input.length > 0) {
+  if (arr.length > 0 && read().length > 0) {
     stop = parseInt(arr[0])
   }
   if (arr.length > 1) {
@@ -31,17 +32,12 @@ function parseInput(input) {
 }
 
 function calcSum(numbers) {
-  let sum = 0
-  for (let i = 0; i < numbers.length; i++) {
-    sum = sum + numAt(numbers, i)
-  }
-  return sum
+  return numbers.reduce((a, b) => a + b)
 }
 
 
 exercise("Merge", function() {
-  let input = read()
-  let {start, stop , step} = parseInput(input)
+  let {start, stop , step} = parseInput()
   let numbers = createNumbers(start, stop, step)
   let sum = calcSum(numbers)
 
