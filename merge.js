@@ -1,15 +1,14 @@
 import {read, print, exercise} from "./utils.js"
 
-function numAt(array, index) {
-  return array[index]
+// Gib das Element an der Stelle `pos` zurück
+function numAt(array, pos) {
+  return array[pos]
 }
 
-function createNumbers(start, stop, step) {
-  let res = []
+function fillNumbers(numbers, {start, stop, step}) {
   for (let i = start; i < stop; i+=step) {
-    res.push(i)
+    numbers.push(i)
   }
-  return res
 }
 
 function parseInput(input) {
@@ -32,17 +31,15 @@ function parseInput(input) {
 
 function calcSum(numbers) {
   let sum = 0
-  for (let i = 0; i < numbers.length; i++) {
-    sum = sum + numAt(numbers, i)
-  }
+  numbers.map(num => sum += num)
   return sum
 }
 
 
 exercise("Merge", function() {
   let input = read()
-  let {start, stop , step} = parseInput(input)
-  let numbers = createNumbers(start, stop, step)
+  let numbers = []
+  fillNumbers(numbers, parseInput(input))
   let sum = calcSum(numbers)
 
   print("Summe: " + sum)
