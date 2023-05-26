@@ -1,3 +1,3 @@
 # Nachpruefung-1W
 
-Die ist die Nachprüfung von <Vorname Nachname> 
+Die ist die Nachprüfung von <Nicole Menzel> 
