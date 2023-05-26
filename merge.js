@@ -1,7 +1,8 @@
 import {read, print, exercise} from "./utils.js"
 
-function numAt(array, index) {
-  return array[index]
+// Gib die Zahl an der Stelle i zurück
+function numAt(numbers, i) {
+  return numbers[i]
 }
 
 function createNumbers(start, stop, step) {
@@ -12,12 +13,12 @@ function createNumbers(start, stop, step) {
   return res
 }
 
-function parseInput(input) {
-  let arr = input.split(" ")
+function parseInput() {
+  let arr = read().split(" ")
   let start = 0
   let stop = 1
   let step = 1
-  if (arr.length > 0 && input.length > 0) {
+  if (arr.length > 0 && read().length > 0) {
     stop = parseInt(arr[0])
   }
   if (arr.length > 1) {
